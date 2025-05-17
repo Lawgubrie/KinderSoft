@@ -17,7 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.kindersoft.R;
 import com.example.kindersoft.modelo.entidades.Usuario;
-import com.example.kindersoft.modelo.servicio.Conexion;
+import com.example.kindersoft.modelo.database.Conexion;
 import com.example.kindersoft.vista.menu.VistaMenu;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

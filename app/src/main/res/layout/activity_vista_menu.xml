@@ -13,51 +13,22 @@
         android:gravity="center"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/txtvSaludoMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="TextView"
+            android:textSize="24sp" />
+
         <LinearLayout
+            android:id="@+id/linearLayoutMenu"
             android:layout_width="306dp"
             android:layout_height="635dp"
             android:gravity="center"
             android:orientation="vertical">
 
-            <ImageButton
-                android:id="@+id/btnUsuario"
-                android:layout_width="256dp"
-                android:layout_height="108dp"
-                android:layout_marginBottom="@dimen/espacio_elementos"
-                android:background="@drawable/usuario"
-                android:onClick="abiriUsuario" />
 
-            <ImageButton
-                android:id="@+id/btnLeccion"
-                android:layout_width="256dp"
-                android:layout_height="108dp"
-                android:layout_marginBottom="@dimen/espacio_elementos"
-                android:background="@drawable/lecciones"
-                android:onClick="abrirLecciones" />
-
-            <ImageButton
-                android:id="@+id/btnTrofeo"
-                android:layout_width="256dp"
-                android:layout_height="108dp"
-                android:layout_marginBottom="@dimen/espacio_elementos"
-                android:background="@drawable/trofeos"
-                android:onClick="abrirTrofeos" />
-
-            <ImageButton
-                android:id="@+id/btnReporte"
-                android:layout_width="256dp"
-                android:layout_height="108dp"
-                android:layout_marginBottom="@dimen/espacio_elementos"
-                android:background="@drawable/reporte"
-                android:onClick="abrirReporte" />
-
-            <ImageButton
-                android:id="@+id/btnSalir"
-                android:layout_width="256dp"
-                android:layout_height="108dp"
-                android:layout_marginBottom="@dimen/espacio_elementos"
-                android:background="@drawable/salir"
-                android:onClick="salir" />
 
         </LinearLayout>
     </LinearLayout>

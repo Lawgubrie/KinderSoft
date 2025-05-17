@@ -1,4 +1,4 @@
-package com.example.kindersoft.modelo.servicio;
+package com.example.kindersoft.modelo.database;
 
 import android.content.Context;
 

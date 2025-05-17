@@ -1,4 +1,4 @@
-package com.example.kindersoft.modelo.servicio;
+package com.example.kindersoft.modelo.database;
 
 import com.google.firebase.database.FirebaseDatabase;
 

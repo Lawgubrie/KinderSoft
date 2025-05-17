@@ -53,6 +53,7 @@ public class VistaRegistro extends AppCompatActivity {
         roles = new ArrayList<>();
         roles.add("Seleccione un rol: ");
         roles.add("estudiante");
+        roles.add("admin");
 
         ArrayAdapter<String> rol = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, roles);
         spinner_rol.setAdapter(rol);
