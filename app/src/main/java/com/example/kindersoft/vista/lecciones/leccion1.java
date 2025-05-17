@@ -11,6 +11,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.kindersoft.R;
+import com.example.kindersoft.vista.juegos.JuegoOtro.GameView_JuegoRecp;
+import com.example.kindersoft.vista.juegos.JuegoOtro.Juego_Reco;
 import com.example.kindersoft.vista.menu.MenuLeccion;
 
 public class leccion1 extends AppCompatActivity {
@@ -31,5 +33,12 @@ public class leccion1 extends AppCompatActivity {
         Intent regresarMenuLeccion = new Intent(this, MenuLeccion.class);
         startActivity(regresarMenuLeccion);
     }
+
+    public void iniciarJuego1(View v){
+        Intent iniciarJuego1 = new Intent(this, Juego_Reco.class);
+        startActivity(iniciarJuego1);
+    }
+
+
 
 }

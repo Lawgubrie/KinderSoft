@@ -84,13 +84,14 @@
                         android:layout_width="213dp"
                         android:layout_height="63dp"
                         android:gravity="center"
-                        android:text="Quiz de Algo"
+                        android:text="Juego"
                         android:textSize="24sp" />
 
                     <ImageButton
                         android:id="@+id/imageButton"
                         android:layout_width="67dp"
                         android:layout_height="63dp"
+                        android:onClick="iniciarJuego1"
                         app:srcCompat="@android:drawable/ic_media_play" />
 
                 </LinearLayout>

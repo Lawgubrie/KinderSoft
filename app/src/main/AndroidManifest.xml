@@ -16,6 +16,12 @@
         android:theme="@style/Theme.KinderSoft"
         tools:targetApi="31">
         <activity
+            android:name=".vista.juegos.JuegoOtro.GameOverDialogFragment"
+            android:exported="false" />
+        <activity
+            android:name=".vista.juegos.JuegoOtro.Juego_Reco"
+            android:exported="false" />
+        <activity
             android:name=".vista.lecciones.leccion1"
             android:exported="false" />
         <activity
