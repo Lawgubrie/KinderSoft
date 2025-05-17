@@ -1,11 +1,9 @@
 package com.example.kindersoft.vista.autenticacion;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -21,7 +19,6 @@ import com.example.kindersoft.R;
 import com.example.kindersoft.modelo.entidades.Usuario;
 import com.example.kindersoft.modelo.servicio.Conexion;
 import com.example.kindersoft.vista.menu.VistaMenu;
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -214,4 +211,5 @@ public class GestionRegistro extends AppCompatActivity {
         Intent menuP = new Intent(this, VistaMenu.class);
         startActivity(menuP);
     }
+
 }
