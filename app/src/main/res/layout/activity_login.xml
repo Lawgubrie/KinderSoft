@@ -25,7 +25,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/txtUsuario"
+                android:id="@+id/txtUsuarioL"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -33,7 +33,7 @@
                 android:inputType="text" />
 
             <EditText
-                android:id="@+id/txtClave"
+                android:id="@+id/txtClaveL"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -41,7 +41,7 @@
                 android:inputType="textPassword" />
 
             <CheckBox
-                android:id="@+id/cbRecordar"
+                android:id="@+id/cbRecordarL"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Recordar usuario y contraseña" />
@@ -52,7 +52,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btnIngresar"
+                    android:id="@+id/btnIngresarL"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -65,7 +65,7 @@
                     android:layout_weight="1" />
 
                 <Button
-                    android:id="@+id/btnRegistrarse"
+                    android:id="@+id/btnRegistrarseL"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

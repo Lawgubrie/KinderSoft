@@ -1,5 +1,6 @@
 package com.example.kindersoft.vista.autenticacion;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -18,6 +19,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.kindersoft.R;
 import com.example.kindersoft.modelo.entidades.Usuario;
+import com.example.kindersoft.modelo.servicio.Conexion;
 import com.example.kindersoft.vista.menu.VistaMenu;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
@@ -51,7 +53,9 @@ public class GestionRegistro extends AppCompatActivity {
         });
 
         inicializarElementos();
-        inicializarFirebase();
+        Conexion.inicializarFirebase(this);
+        database = Conexion.getDatabase();
+        databaseReference = Conexion.getDatabaseReference();
 
         roles = new ArrayList<>();
         roles.add("Seleccione un rol: ");
@@ -96,11 +100,6 @@ public class GestionRegistro extends AppCompatActivity {
         spinner_rol_G = findViewById(R.id.spinner_rol_G);
         txtPuntosTG = findViewById(R.id.txtPuntosT_G);
 
-    }
-    private void inicializarFirebase() {
-        FirebaseApp.initializeApp(this);
-        database = FirebaseDatabase.getInstance();
-        databaseReference = database.getReference();
     }
 
     private void limpiarCampos(){
@@ -210,8 +209,6 @@ public class GestionRegistro extends AppCompatActivity {
         Toast.makeText(this, "Usuario eliminado", Toast.LENGTH_SHORT).show();
         limpiarCampos();
     }
-
-
 
     public void regresarMenu(View v){
         Intent menuP = new Intent(this, VistaMenu.class);
