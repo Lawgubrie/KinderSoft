@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vista.autenticacion.GestionRegistro">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <LinearLayout
+            android:layout_width="370dp"
+            android:layout_height="618dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:scrollbars="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/espacio_elementos"
+                android:gravity="center"
+                android:text="Gestion Usuario"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/txtUsuarioG"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/espacio_elementos"
+                    android:ems="10"
+                    android:hint="Usuario"
+                    android:inputType="text" />
+
+                <ImageButton
+                    android:id="@+id/btnBuscar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#9979E0"
+                    android:onClick="buscarUsuario"
+                    android:src="@android:drawable/ic_menu_search" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/txtClaveG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/espacio_elementos"
+                android:ems="10"
+                android:hint="Contrasenia"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/txtNombresG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/espacio_elementos"
+                android:ems="10"
+                android:hint="Nombres"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/txtEdadG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/espacio_elementos"
+                android:ems="10"
+                android:hint="Edad"
+                android:inputType="number" />
+
+            <Spinner
+                android:id="@+id/spinner_rol_G"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_marginBottom="@dimen/espacio_elementos"
+                android:scrollbarSize="8dp" />
+
+            <EditText
+                android:id="@+id/txtPuntosT_G"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/espacio_elementos"
+                android:ems="10"
+                android:hint="Puntos Totales"
+                android:inputType="number" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnGuardar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="54dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FEA0D166"
+                    android:onClick="actualizarUsuario"
+                    app:srcCompat="@android:drawable/ic_menu_edit" />
+
+                <ImageButton
+                    android:id="@+id/btnEliminar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="54dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#DE6F6F"
+                    android:onClick="eliminarUsuario"
+                    android:src="@android:drawable/ic_menu_delete" />
+
+                <ImageButton
+                    android:id="@+id/btnCancelar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="54dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#9979E0"
+                    android:onClick="regresarMenu"
+                    app:srcCompat="?attr/actionModeCloseDrawable" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

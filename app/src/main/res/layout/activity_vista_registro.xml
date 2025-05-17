@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vista.autenticacion.VistaRegistro">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="370dp"
+            android:layout_height="618dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:scrollbars="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/espacio_elementos"
+                android:gravity="center"
+                android:text="Registro Usuario"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/txtUsuarioG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/espacio_elementos"
+                android:ems="10"
+                android:hint="Usuario"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/txtClaveG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/espacio_elementos"
+                android:ems="10"
+                android:hint="Contrasenia"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/txtNombresG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/espacio_elementos"
+                android:ems="10"
+                android:hint="Nombres"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/txtEdadG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/espacio_elementos"
+                android:ems="10"
+                android:hint="Edad"
+                android:inputType="number" />
+
+            <Spinner
+                android:id="@+id/spinner_rol_G"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_marginBottom="@dimen/espacio_elementos"
+                android:scrollbarSize="8dp" />
+
+            <EditText
+                android:id="@+id/txtPuntosT_G"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/espacio_elementos"
+                android:ems="10"
+                android:hint="Puntos Totales"
+                android:inputType="number" />
+
+            <CheckBox
+                android:id="@+id/cbTerminosC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/espacio_elementos"
+                android:checked="true"
+                android:text="Aceptar los terminos y condiciones"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnGuardar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="54dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FEA0D166"
+                    android:onClick="registrarUsuario"
+                    app:srcCompat="@android:drawable/ic_menu_save" />
+
+                <ImageButton
+                    android:id="@+id/btnCancelar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="54dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#DE6F6F"
+                    android:onClick="regresarLogin"
+                    android:tint="#F8F4F4"
+                    app:srcCompat="?attr/actionModeCloseDrawable" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

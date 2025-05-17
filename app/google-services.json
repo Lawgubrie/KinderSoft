@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "628521726528",
+    "firebase_url": "https://kindersoft-f9f4a-default-rtdb.firebaseio.com",
+    "project_id": "kindersoft-f9f4a",
+    "storage_bucket": "kindersoft-f9f4a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628521726528:android:d7966eabc3ce758ca725a5",
+        "android_client_info": {
+          "package_name": "com.example.kindersoft"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4E5V0U41QztbObH6gl0bL5gOtPOICQUU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

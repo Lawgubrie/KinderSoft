@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vista.menu.VistaMenu">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="306dp"
+            android:layout_height="635dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/btnUsuario"
+                android:layout_width="256dp"
+                android:layout_height="108dp"
+                android:layout_marginBottom="@dimen/espacio_elementos"
+                android:background="@drawable/usuario"
+                android:onClick="abiriUsuario" />
+
+            <ImageButton
+                android:id="@+id/btnLeccion"
+                android:layout_width="256dp"
+                android:layout_height="108dp"
+                android:layout_marginBottom="@dimen/espacio_elementos"
+                android:background="@drawable/lecciones"
+                android:onClick="abrirLecciones" />
+
+            <ImageButton
+                android:id="@+id/btnTrofeo"
+                android:layout_width="256dp"
+                android:layout_height="108dp"
+                android:layout_marginBottom="@dimen/espacio_elementos"
+                android:background="@drawable/trofeos"
+                android:onClick="abrirTrofeos" />
+
+            <ImageButton
+                android:id="@+id/btnReporte"
+                android:layout_width="256dp"
+                android:layout_height="108dp"
+                android:layout_marginBottom="@dimen/espacio_elementos"
+                android:background="@drawable/reporte"
+                android:onClick="abrirReporte" />
+
+            <ImageButton
+                android:id="@+id/btnSalir"
+                android:layout_width="256dp"
+                android:layout_height="108dp"
+                android:layout_marginBottom="@dimen/espacio_elementos"
+                android:background="@drawable/salir"
+                android:onClick="salir" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
