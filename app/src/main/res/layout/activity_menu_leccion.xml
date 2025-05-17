@@ -7,4 +7,39 @@
     android:layout_height="match_parent"
     tools:context=".vista.menu.MenuLeccion">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="292dp"
+            android:layout_height="631dp"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/btnRegresarMenuP"
+                android:layout_width="46dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#F6F5F5"
+                android:onClick="regresarMenuPrincipal"
+                app:srcCompat="@android:drawable/btn_dialog" />
+
+            <Button
+                android:id="@+id/btnLeccion1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="abrirLeccion1"
+                android:text="Leccion 1"
+                app:icon="@android:drawable/ic_media_play" />
+
+            <Button
+                android:id="@+id/btnLeccion2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Leccion 2"
+                app:icon="@android:drawable/ic_media_play" />
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

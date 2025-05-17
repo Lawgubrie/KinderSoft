@@ -59,7 +59,7 @@ public class VistaMenu extends AppCompatActivity {
     }
 
     public void abrirLecciones(View v){
-        Intent abrirLecciones = new Intent(this, Login.class);
+        Intent abrirLecciones = new Intent(this, MenuLeccion.class);
         startActivity(abrirLecciones);
     }
 
@@ -74,10 +74,8 @@ public class VistaMenu extends AppCompatActivity {
     }
 
     public void salir(View v){
-
         Intent salir = new Intent(this, Login.class);
         startActivity(salir);
-
     }
 
 }
