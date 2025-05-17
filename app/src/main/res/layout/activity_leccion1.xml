@@ -42,11 +42,11 @@
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:background="@drawable/img" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="469dp"
+                android:layout_height="270dp"
                 android:orientation="vertical">
 
                 <Space
@@ -58,12 +58,6 @@
                     android:layout_height="68dp"
                     android:orientation="horizontal">
 
-                    <ImageButton
-                        android:id="@+id/imageButton"
-                        android:layout_width="67dp"
-                        android:layout_height="63dp"
-                        app:srcCompat="@android:drawable/ic_media_play" />
-
                     <TextView
                         android:id="@+id/textView4"
                         android:layout_width="213dp"
@@ -72,18 +66,18 @@
                         android:text="Quiz de animales"
                         android:textSize="24sp" />
 
+                    <ImageButton
+                        android:id="@+id/imageButton"
+                        android:layout_width="67dp"
+                        android:layout_height="63dp"
+                        app:srcCompat="@android:drawable/ic_media_play" />
+
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="63dp"
                     android:orientation="horizontal">
-
-                    <ImageButton
-                        android:id="@+id/imageButton"
-                        android:layout_width="67dp"
-                        android:layout_height="63dp"
-                        app:srcCompat="@android:drawable/ic_media_play" />
 
                     <TextView
                         android:id="@+id/textView4"
@@ -92,6 +86,12 @@
                         android:gravity="center"
                         android:text="Quiz de Algo"
                         android:textSize="24sp" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton"
+                        android:layout_width="67dp"
+                        android:layout_height="63dp"
+                        app:srcCompat="@android:drawable/ic_media_play" />
 
                 </LinearLayout>
 
