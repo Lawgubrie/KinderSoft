@@ -3,8 +3,10 @@ package com.example.kindersoft.vista.autenticacion;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -32,7 +34,9 @@ public class GestionRegistro extends AppCompatActivity {
 
     private ArrayList<String> roles;
     private List<Usuario> listaUsuarios;
-    ArrayAdapter<Usuario> arrayAdapterUsuarios; //para la listaView
+    private ListView listViewUsuarios;
+    private Usuario usuarioSeleccionado;
+    ArrayAdapter<Usuario> arrayAdapterUsuarios;
     private EditText txtUsuarioG, txtClaveG, txtNombresG, txtEdadG, txtPuntosTG;
     private Spinner spinner_rol_G;
     private FirebaseDatabase database;
@@ -57,11 +61,26 @@ public class GestionRegistro extends AppCompatActivity {
         roles = new ArrayList<>();
         roles.add("Seleccione un rol: ");
         roles.add("estudiante");
+        roles.add("admin");
 
         ArrayAdapter<String> rol = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, roles);
         spinner_rol_G.setAdapter(rol);
 
         listarUsuarios();
+
+        listViewUsuarios.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                usuarioSeleccionado = (Usuario) parent.getItemAtPosition(position);
+                txtUsuarioG.setText(usuarioSeleccionado.getUsername());
+                txtClaveG.setText(usuarioSeleccionado.getPassword());
+                txtNombresG.setText(usuarioSeleccionado.getNombres());
+                txtEdadG.setText(String.valueOf(usuarioSeleccionado.getEdad()));
+                txtPuntosTG.setText(String.valueOf(usuarioSeleccionado.getPuntos_totales()));
+                setSpinnerValue(spinner_rol_G, usuarioSeleccionado.getRol());
+            }
+        });
+
     }
 
     private void listarUsuarios() {
@@ -74,9 +93,11 @@ public class GestionRegistro extends AppCompatActivity {
                 for(DataSnapshot objSnaptshot : dataSnapshot.getChildren()){
                     Usuario u = objSnaptshot.getValue(Usuario.class);
                     listaUsuarios.add(u);
-                    System.out.println(listaUsuarios);
-                    //arrayAdapterUsuarios = new ArrayAdapter<Usuario>(GestionRegistro.this, android.R.layout.simple_list_item_1, listaUsuarios);
-                    // Se puede Guardar en una Lista de tipo Usuario visible en el telefono
+
+                    arrayAdapterUsuarios = new ArrayAdapter<Usuario>(GestionRegistro.this, android.R.layout.simple_list_item_1, listaUsuarios);
+
+                    listViewUsuarios.setAdapter(arrayAdapterUsuarios);
+
                 }
 
             }
@@ -90,12 +111,13 @@ public class GestionRegistro extends AppCompatActivity {
 
     private void inicializarElementos() {
 
-        txtUsuarioG = findViewById(R.id.txtUsuarioG);
+        txtUsuarioG = findViewById(R.id.txtNombreJ);
         txtClaveG = findViewById(R.id.txtClaveG);
-        txtNombresG = findViewById(R.id.txtNombresG);
+        txtNombresG = findViewById(R.id.txtDescripcionJ);
         txtEdadG = findViewById(R.id.txtEdadG);
         spinner_rol_G = findViewById(R.id.spinner_rol_G);
-        txtPuntosTG = findViewById(R.id.txtPuntosT_G);
+        txtPuntosTG = findViewById(R.id.txtPuntajeMax);
+        listViewUsuarios = findViewById(R.id.listViewJuegos);
 
     }
 

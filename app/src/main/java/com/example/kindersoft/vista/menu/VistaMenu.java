@@ -8,7 +8,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -21,13 +20,15 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.kindersoft.GestionJuego;
 import com.example.kindersoft.R;
 import com.example.kindersoft.modelo.entidades.Usuario;
 import com.example.kindersoft.vista.autenticacion.GestionRegistro;
 import com.example.kindersoft.vista.autenticacion.Login;
+import com.example.kindersoft.vista.lecciones.GestionLeccion;
+import com.example.kindersoft.vista.lecciones.MenuLeccion;
 
 import java.util.Map;
-import java.util.Objects;
 
 public class VistaMenu extends AppCompatActivity {
     private Usuario usuarioLeer;
@@ -37,8 +38,8 @@ public class VistaMenu extends AppCompatActivity {
     private String[] menuAdmin = { "usuarios", "lecciones", "trofeos", "reporte", "salir" };
     private Map<String , Class<?>> actividades = Map.of(
             "usuarios", GestionRegistro.class,
-            "lecciones", MenuLeccion.class,
-            "trofeos", Login.class,
+            "lecciones", GestionLeccion.class,
+            "trofeos", GestionJuego.class,
             "reporte", Login.class,
             "salir", Login.class
     );
@@ -76,10 +77,6 @@ public class VistaMenu extends AppCompatActivity {
         if (item.getItemId() == R.id.itemAcercaDe)
             Toast.makeText(this, "presiono sobre configuracion", Toast.LENGTH_SHORT).show();
 
-        if (item.getItemId() == R.id.itemSalir) {
-            Intent login = new Intent(this, Login.class);
-            startActivity(login);
-        }
         return true;
 
     }
@@ -123,16 +120,39 @@ public class VistaMenu extends AppCompatActivity {
             boton.setTag(item);
             boton.setOnClickListener(v -> {
                 String opcion = (String) v.getTag();
-                if(opcion != null){
-                    Class<?> actividadDestino = actividades.get(opcion);
-                    if(actividadDestino != null){
-                        Intent intent = new Intent(VistaMenu.this, actividadDestino);
+                if (opcion != null) {
+                    if (opcion.equals("salir")) {
+                        borrarDatosUsuario();
+                        borrarCredenciales();
+                        Toast.makeText(this, "Sesión cerrada", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(VistaMenu.this, Login.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // limpiar pila de actividades
                         startActivity(intent);
+                        finish();
+                    } else {
+                        Class<?> actividadDestino = actividades.get(opcion);
+                        if (actividadDestino != null) {
+                            Intent intent = new Intent(VistaMenu.this, actividadDestino);
+                            startActivity(intent);
+                        }
                     }
                 }
             });
             menu.addView(boton);
         }
+    }
+
+    public void borrarDatosUsuario() {
+        SharedPreferences splogin = getSharedPreferences("datos_usuario", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = splogin.edit();
+        editor.clear();
+        editor.apply();
+    }
+    public void borrarCredenciales() {
+        SharedPreferences splogin = getSharedPreferences("Credenciales", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = splogin.edit();
+        editor.clear();
+        editor.apply();
     }
 
 

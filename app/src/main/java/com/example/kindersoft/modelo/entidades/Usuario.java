@@ -80,14 +80,20 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario{" +
+        return
+                "UserName: " + username +
+                         "\nRol: " +rol;
+    }
+
+    public String toStringCompleto(){
+        return
                 "id='" + id + '\'' +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", nombres='" + nombres + '\'' +
-                ", edad=" + edad +
-                ", rol='" + rol + '\'' +
-                ", puntosTotales=" + puntos_totales +
-                '}';
+                        ", username='" + username + '\'' +
+                        ", password='" + password + '\'' +
+                        ", nombres='" + nombres + '\'' +
+                        ", edad=" + edad +
+                        ", rol='" + rol + '\'' +
+                        ", puntosTotales=" + puntos_totales +
+                        '}';
     }
 }

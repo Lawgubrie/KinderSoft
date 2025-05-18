@@ -17,8 +17,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.kindersoft.R;
+import com.example.kindersoft.modelo.database.Conexion;
 import com.example.kindersoft.modelo.entidades.Usuario;
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -47,13 +47,14 @@ public class VistaRegistro extends AppCompatActivity {
             return insets;
         });
 
-        inicializarFirebase();
+        Conexion.inicializarFirebase(this);
+        database = Conexion.getDatabase();
+        databaseReference = Conexion.getDatabaseReference();
         inicializarElementos();
 
         roles = new ArrayList<>();
         roles.add("Seleccione un rol: ");
         roles.add("estudiante");
-        roles.add("admin");
 
         ArrayAdapter<String> rol = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, roles);
         spinner_rol.setAdapter(rol);
@@ -61,19 +62,14 @@ public class VistaRegistro extends AppCompatActivity {
 
     private void inicializarElementos() {
 
-        txtUsuarioR = findViewById(R.id.txtUsuarioG);
+        txtUsuarioR = findViewById(R.id.txtNombreJ);
         txtClaveR = findViewById(R.id.txtClaveG);
-        txtNombres = findViewById(R.id.txtNombresG);
+        txtNombres = findViewById(R.id.txtDescripcionJ);
         txtEdad = findViewById(R.id.txtEdadG);
         spinner_rol = findViewById(R.id.spinner_rol_G);
         cbTerminosC = findViewById(R.id.cbTerminosC);
-        txtPuntosT = findViewById(R.id.txtPuntosT_G);
+        txtPuntosT = findViewById(R.id.txtPuntajeMax);
 
-    }
-    private void inicializarFirebase() {
-        FirebaseApp.initializeApp(this);
-        database = FirebaseDatabase.getInstance();
-        databaseReference = database.getReference();
     }
 
     public void registrarUsuario(View v){

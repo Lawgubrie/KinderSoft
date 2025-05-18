@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".vista.autenticacion.GestionRegistro">
+    tools:context=".vista.lecciones.GestionLeccion">
 
     <LinearLayout
         android:layout_width="409dp"
@@ -21,7 +21,7 @@
 
         <LinearLayout
             android:layout_width="370dp"
-            android:layout_height="443dp"
+            android:layout_height="320dp"
             android:gravity="center"
             android:orientation="vertical"
             android:scrollbars="vertical">
@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/espacio_elementos"
                 android:gravity="center"
-                android:text="Gestion Usuario"
+                android:text="Gestion Leccion"
                 android:textSize="24sp" />
 
             <LinearLayout
@@ -42,31 +42,14 @@
 
                 <EditText
                     android:id="@+id/txtNombreJ"
-                    android:layout_width="270dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/espacio_elementos"
                     android:ems="10"
-                    android:hint="Usuario"
+                    android:hint="Nombre"
                     android:inputType="text" />
 
-                <ImageButton
-                    android:id="@+id/btnGuardarLeccion"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:backgroundTint="#9979E0"
-                    android:onClick="buscarUsuario"
-                    android:src="@android:drawable/ic_menu_search" />
             </LinearLayout>
-
-            <EditText
-                android:id="@+id/txtClaveG"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/espacio_elementos"
-                android:ems="10"
-                android:hint="Contrasenia"
-                android:inputType="textPassword" />
 
             <EditText
                 android:id="@+id/txtDescripcionJ"
@@ -74,24 +57,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/espacio_elementos"
                 android:ems="10"
-                android:hint="Nombres"
+                android:hint="Descripcion "
                 android:inputType="text" />
-
-            <EditText
-                android:id="@+id/txtEdadG"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/espacio_elementos"
-                android:ems="10"
-                android:hint="Edad"
-                android:inputType="number" />
-
-            <Spinner
-                android:id="@+id/spinner_rol_G"
-                android:layout_width="match_parent"
-                android:layout_height="37dp"
-                android:layout_marginBottom="@dimen/espacio_elementos"
-                android:scrollbarSize="8dp" />
 
             <EditText
                 android:id="@+id/txtPuntajeMax"
@@ -108,12 +75,21 @@
                 android:orientation="horizontal">
 
                 <ImageButton
+                    android:id="@+id/btnGuardarLeccion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="54dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#9979E0"
+                    android:onClick="registrarLeccion"
+                    android:src="@android:drawable/ic_menu_save" />
+
+                <ImageButton
                     android:id="@+id/btnActualizar"
                     android:layout_width="wrap_content"
                     android:layout_height="54dp"
                     android:layout_weight="1"
                     android:backgroundTint="#FEA0D166"
-                    android:onClick="actualizarUsuario"
+                    android:onClick="actualizarLeccion"
                     app:srcCompat="@android:drawable/ic_menu_edit" />
 
                 <ImageButton
@@ -122,7 +98,7 @@
                     android:layout_height="54dp"
                     android:layout_weight="1"
                     android:backgroundTint="#DE6F6F"
-                    android:onClick="eliminarUsuario"
+                    android:onClick="eliminarLeccion"
                     android:src="@android:drawable/ic_menu_delete" />
 
                 <ImageButton
@@ -139,6 +115,6 @@
         <ListView
             android:id="@+id/listViewJuegos"
             android:layout_width="371dp"
-            android:layout_height="244dp" />
+            android:layout_height="280dp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

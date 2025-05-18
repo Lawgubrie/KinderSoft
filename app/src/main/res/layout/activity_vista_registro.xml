@@ -30,7 +30,7 @@
                 android:textSize="24sp" />
 
             <EditText
-                android:id="@+id/txtUsuarioG"
+                android:id="@+id/txtNombreJ"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/espacio_elementos"
@@ -48,7 +48,7 @@
                 android:inputType="textPassword" />
 
             <EditText
-                android:id="@+id/txtNombresG"
+                android:id="@+id/txtDescripcionJ"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/espacio_elementos"
@@ -73,7 +73,7 @@
                 android:scrollbarSize="8dp" />
 
             <EditText
-                android:id="@+id/txtPuntosT_G"
+                android:id="@+id/txtPuntajeMax"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/espacio_elementos"
@@ -96,7 +96,7 @@
                 android:orientation="horizontal">
 
                 <ImageButton
-                    android:id="@+id/btnGuardar"
+                    android:id="@+id/btnActualizar"
                     android:layout_width="wrap_content"
                     android:layout_height="54dp"
                     android:layout_weight="1"

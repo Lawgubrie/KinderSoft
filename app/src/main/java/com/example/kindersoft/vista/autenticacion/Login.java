@@ -46,6 +46,13 @@ public class Login extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
 
+        //Verificar si ya hay credenciales guardadas
+        if(credencialExistente()) {
+            startActivity(new Intent(this, VistaMenu.class));
+            finish(); // Cierra el LoginActivity para que no se pueda volver atrás
+            return;
+        }
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -58,6 +65,7 @@ public class Login extends AppCompatActivity {
 
         inicializarElementos();
         listarUsuarios();
+        leerCredenciales();
     }
     private void inicializarElementos() {
         txtUser = findViewById(R.id.txtUsuarioL);
@@ -105,6 +113,12 @@ public class Login extends AppCompatActivity {
                             Log.i("Usuario Login", usuario.toString());
                             guardarUsuarioEnPreferencias(usuario);
 
+                            if (recordar.isChecked()) {
+                                guardarContrasenia(usernameInput, passwordInput);
+                            }else{
+                                borrarCredenciales();
+                            }
+
                             Intent intent = new Intent(Login.this, VistaMenu.class);
                             startActivity(intent);
                             finish();
@@ -139,6 +153,38 @@ public class Login extends AppCompatActivity {
 
         editor.apply();
     }
+
+    private void guardarContrasenia(String usuario, String clave){
+        SharedPreferences splogin = getSharedPreferences("Credenciales", Context.MODE_PRIVATE);
+        SharedPreferences.Editor speditlogin = splogin.edit();
+        speditlogin.putString("spUsuario",usuario);
+        speditlogin.putString("spClave", clave);
+        speditlogin.apply();
+    }
+    private boolean credencialExistente() {
+        SharedPreferences splogin = getSharedPreferences("Credenciales", Context.MODE_PRIVATE);
+        String usuario = splogin.getString("spUsuario", "");
+        String clave = splogin.getString("spClave", "");
+        return !usuario.isEmpty() && !clave.isEmpty();
+    }
+    private void leerCredenciales(){
+        SharedPreferences splogin = getSharedPreferences("Credenciales", Context.MODE_PRIVATE);
+        String usuario = splogin.getString("spUsuario", "");
+        String clave = splogin.getString("spClave", "");
+
+        if(!usuario.isEmpty() && !clave.isEmpty()) {
+            txtUser.setText(usuario);
+            txtContrasena.setText(clave);
+            recordar.setChecked(true); // Marcamos el checkbox si hay credenciales
+        }
+    }
+    public void borrarCredenciales() {
+        SharedPreferences splogin = getSharedPreferences("Credenciales", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = splogin.edit();
+        editor.clear();
+        editor.apply();
+    }
+
 
 
 }

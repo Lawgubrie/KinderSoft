@@ -1,4 +1,4 @@
-package com.example.kindersoft.vista.menu;
+package com.example.kindersoft.vista.lecciones;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.kindersoft.R;
-import com.example.kindersoft.vista.lecciones.leccion1;
+import com.example.kindersoft.vista.menu.VistaMenu;
 
 public class MenuLeccion extends AppCompatActivity {
 
