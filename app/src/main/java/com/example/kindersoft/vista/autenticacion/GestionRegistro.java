@@ -111,13 +111,13 @@ public class GestionRegistro extends AppCompatActivity {
 
     private void inicializarElementos() {
 
-        txtUsuarioG = findViewById(R.id.txtNombreJ);
+        txtUsuarioG = findViewById(R.id.txtNombre);
         txtClaveG = findViewById(R.id.txtClaveG);
-        txtNombresG = findViewById(R.id.txtDescripcionJ);
+        txtNombresG = findViewById(R.id.txtDescripcion);
         txtEdadG = findViewById(R.id.txtEdadG);
         spinner_rol_G = findViewById(R.id.spinner_rol_G);
-        txtPuntosTG = findViewById(R.id.txtPuntajeMax);
-        listViewUsuarios = findViewById(R.id.listViewJuegos);
+        txtPuntosTG = findViewById(R.id.txtPuntuacion);
+        listViewUsuarios = findViewById(R.id.listViewGestion);
 
     }
 

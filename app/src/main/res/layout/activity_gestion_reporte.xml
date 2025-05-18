@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".vista.juegos.GestionJuego">
+    tools:context=".vista.reportes.GestionReporte">
 
     <LinearLayout
         android:layout_width="409dp"
@@ -32,24 +32,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/espacio_elementos"
                 android:gravity="center"
-                android:text="Gestion Juego"
+                android:text="Gestion Reporte"
                 android:textSize="24sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <EditText
-                    android:id="@+id/txtNombre"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/espacio_elementos"
-                    android:ems="10"
-                    android:hint="Nombre"
-                    android:inputType="text" />
-
-            </LinearLayout>
+                android:orientation="horizontal"/>
 
             <Spinner
                 android:id="@+id/spinnerUsuarioR"
@@ -62,13 +51,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/espacio_elementos"
                 android:ems="10"
-                android:hint="Puntaje Maximo"
+                android:hint="Puntuacion"
                 android:inputType="number" />
-
-            <Spinner
-                android:id="@+id/spinnerIdLeccion"
-                android:layout_width="match_parent"
-                android:layout_height="40dp" />
 
             <Space
                 android:layout_width="match_parent"
@@ -85,7 +69,7 @@
                     android:layout_height="54dp"
                     android:layout_weight="1"
                     android:backgroundTint="#9979E0"
-                    android:onClick="registrarJuego"
+                    android:onClick="registrarReporte"
                     android:src="@android:drawable/ic_menu_save" />
 
                 <ImageButton
@@ -94,7 +78,7 @@
                     android:layout_height="54dp"
                     android:layout_weight="1"
                     android:backgroundTint="#FEA0D166"
-                    android:onClick="actualizarJuego"
+                    android:onClick="actualizarReporte"
                     app:srcCompat="@android:drawable/ic_menu_edit" />
 
                 <ImageButton
@@ -103,7 +87,7 @@
                     android:layout_height="54dp"
                     android:layout_weight="1"
                     android:backgroundTint="#DE6F6F"
-                    android:onClick="eliminarJuego"
+                    android:onClick="eliminarReporte"
                     android:src="@android:drawable/ic_menu_delete" />
 
                 <ImageButton

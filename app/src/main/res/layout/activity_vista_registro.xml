@@ -30,7 +30,7 @@
                 android:textSize="24sp" />
 
             <EditText
-                android:id="@+id/txtNombreJ"
+                android:id="@+id/txtNombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/espacio_elementos"
@@ -48,7 +48,7 @@
                 android:inputType="textPassword" />
 
             <EditText
-                android:id="@+id/txtDescripcionJ"
+                android:id="@+id/txtDescripcion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/espacio_elementos"
@@ -73,7 +73,7 @@
                 android:scrollbarSize="8dp" />
 
             <EditText
-                android:id="@+id/txtPuntajeMax"
+                android:id="@+id/txtPuntuacion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/espacio_elementos"

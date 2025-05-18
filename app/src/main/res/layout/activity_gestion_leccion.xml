@@ -41,7 +41,7 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/txtNombreJ"
+                    android:id="@+id/txtNombre"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/espacio_elementos"
@@ -52,7 +52,7 @@
             </LinearLayout>
 
             <EditText
-                android:id="@+id/txtDescripcionJ"
+                android:id="@+id/txtDescripcion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/espacio_elementos"
@@ -61,7 +61,7 @@
                 android:inputType="text" />
 
             <EditText
-                android:id="@+id/txtPuntajeMax"
+                android:id="@+id/txtPuntuacion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/espacio_elementos"
@@ -75,7 +75,7 @@
                 android:orientation="horizontal">
 
                 <ImageButton
-                    android:id="@+id/btnGuardarLeccion"
+                    android:id="@+id/btnGuardar"
                     android:layout_width="wrap_content"
                     android:layout_height="54dp"
                     android:layout_weight="1"
@@ -113,7 +113,7 @@
         </LinearLayout>
 
         <ListView
-            android:id="@+id/listViewJuegos"
+            android:id="@+id/listViewGestion"
             android:layout_width="371dp"
             android:layout_height="280dp" />
     </LinearLayout>

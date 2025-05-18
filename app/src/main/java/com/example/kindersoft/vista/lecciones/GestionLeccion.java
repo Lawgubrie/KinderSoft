@@ -99,10 +99,10 @@ public class GestionLeccion extends AppCompatActivity {
     }
 
     private void inicializarElementos() {
-        txtNombreL = findViewById(R.id.txtNombreJ);
-        txtDescripcionL = findViewById(R.id.txtDescripcionJ);
-        txtPuntosL = findViewById(R.id.txtPuntajeMax);
-        listViewLecciones = findViewById(R.id.listViewJuegos);
+        txtNombreL = findViewById(R.id.txtNombre);
+        txtDescripcionL = findViewById(R.id.txtDescripcion);
+        txtPuntosL = findViewById(R.id.txtPuntuacion);
+        listViewLecciones = findViewById(R.id.listViewGestion);
     }
 
     private void limpiarCampos(){

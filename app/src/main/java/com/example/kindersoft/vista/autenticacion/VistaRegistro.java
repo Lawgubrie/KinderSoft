@@ -62,13 +62,13 @@ public class VistaRegistro extends AppCompatActivity {
 
     private void inicializarElementos() {
 
-        txtUsuarioR = findViewById(R.id.txtNombreJ);
+        txtUsuarioR = findViewById(R.id.txtNombre);
         txtClaveR = findViewById(R.id.txtClaveG);
-        txtNombres = findViewById(R.id.txtDescripcionJ);
+        txtNombres = findViewById(R.id.txtDescripcion);
         txtEdad = findViewById(R.id.txtEdadG);
         spinner_rol = findViewById(R.id.spinner_rol_G);
         cbTerminosC = findViewById(R.id.cbTerminosC);
-        txtPuntosT = findViewById(R.id.txtPuntajeMax);
+        txtPuntosT = findViewById(R.id.txtPuntuacion);
 
     }
 

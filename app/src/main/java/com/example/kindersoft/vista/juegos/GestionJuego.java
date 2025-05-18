@@ -1,4 +1,4 @@
-package com.example.kindersoft;
+package com.example.kindersoft.vista.juegos;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,12 +17,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.kindersoft.R;
 import com.example.kindersoft.modelo.database.Conexion;
 import com.example.kindersoft.modelo.entidades.Juego;
 import com.example.kindersoft.modelo.entidades.Leccion;
-import com.example.kindersoft.modelo.entidades.Usuario;
-import com.example.kindersoft.vista.autenticacion.VistaRegistro;
-import com.example.kindersoft.vista.lecciones.GestionLeccion;
 import com.example.kindersoft.vista.menu.VistaMenu;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -34,8 +32,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GestionJuego extends AppCompatActivity {
-
-
     String idLocal;
     private ArrayList<String> tiposJuego;
     private List<Juego> listaJuegos;
@@ -154,12 +150,12 @@ public class GestionJuego extends AppCompatActivity {
     }
 
     private void inicializarElementos() {
-        txtNombreJ = findViewById(R.id.txtNombreJ);
-        txtPuntajeMaximo = findViewById(R.id.txtPuntajeMax);
-        listViewJuegos = findViewById(R.id.listViewJuegos);
-        spinerTipoJuego = findViewById(R.id.spinnerTipo);
+        txtNombreJ = findViewById(R.id.txtNombre);
+        txtPuntajeMaximo = findViewById(R.id.txtPuntuacion);
+        listViewJuegos = findViewById(R.id.listViewGestion);
+        spinerTipoJuego = findViewById(R.id.spinnerUsuarioR);
         spinnerIdLeccion = findViewById(R.id.spinnerIdLeccion);
-        listViewJuegos = findViewById(R.id.listViewJuegos);
+        listViewJuegos = findViewById(R.id.listViewGestion);
 
     }
     private void limpiarCampos(){

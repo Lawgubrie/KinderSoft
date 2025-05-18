@@ -20,13 +20,14 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.kindersoft.GestionJuego;
+import com.example.kindersoft.vista.juegos.GestionJuego;
 import com.example.kindersoft.R;
 import com.example.kindersoft.modelo.entidades.Usuario;
 import com.example.kindersoft.vista.autenticacion.GestionRegistro;
 import com.example.kindersoft.vista.autenticacion.Login;
 import com.example.kindersoft.vista.lecciones.GestionLeccion;
-import com.example.kindersoft.vista.lecciones.MenuLeccion;
+import com.example.kindersoft.vista.reportes.GestionReporte;
+import com.example.kindersoft.vista.trofeos.GestionTrofeos;
 
 import java.util.Map;
 
@@ -35,12 +36,13 @@ public class VistaMenu extends AppCompatActivity {
     private TextView txtSaludoUser;
     private LinearLayout menu;
     private String[] menuEstudiantes = { "lecciones", "trofeos", "reporte", "salir" };
-    private String[] menuAdmin = { "usuarios", "lecciones", "trofeos", "reporte", "salir" };
+    private String[] menuAdmin = { "usuarios", "lecciones", "trofeos", "reporte","", "salir" };
     private Map<String , Class<?>> actividades = Map.of(
             "usuarios", GestionRegistro.class,
             "lecciones", GestionLeccion.class,
-            "trofeos", GestionJuego.class,
-            "reporte", Login.class,
+            "trofeos", GestionTrofeos.class,
+            "reporte", GestionReporte.class,
+            "", GestionJuego.class,
             "salir", Login.class
     );
 
