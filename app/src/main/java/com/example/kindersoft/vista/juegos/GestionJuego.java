@@ -104,7 +104,6 @@ public class GestionJuego extends AppCompatActivity {
             }
         });
     }
-
     private void listarLecciones() {
         listaLecciones = new ArrayList<>();
 
@@ -165,8 +164,6 @@ public class GestionJuego extends AppCompatActivity {
         spinerTipoJuego.setSelection(0);
     }
 
-
-
     private boolean validarCampos(){
         if (txtNombreJ.getText().toString().isEmpty()){
             txtNombreJ.setError("Requerido");
@@ -201,7 +198,6 @@ public class GestionJuego extends AppCompatActivity {
                         break;
                     }
                 }
-
                 if (existe) {
                     Toast.makeText(GestionJuego.this, "Ese nombre de juego ya existe. Elija otro.", Toast.LENGTH_SHORT).show();
                     txtNombreJ.setError("Nombre de juego ya existente");
@@ -213,7 +209,6 @@ public class GestionJuego extends AppCompatActivity {
                     juego.setTipo(spinerTipoJuego.getSelectedItem().toString().trim());
                     juego.setPuntaje_maximos(Integer.parseInt(txtPuntajeMaximo.getText().toString().trim()));
                     juego.setId_leccion(((Leccion) spinnerIdLeccion.getSelectedItem()).getId());
-
 
                     databaseReference.child("juegos").child(juego.getId()).setValue(juego);
                     Toast.makeText(GestionJuego.this, "juegos registrado con éxito", Toast.LENGTH_SHORT).show();

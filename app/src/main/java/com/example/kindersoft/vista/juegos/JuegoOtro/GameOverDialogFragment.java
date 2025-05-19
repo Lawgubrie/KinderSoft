@@ -78,6 +78,4 @@ public class GameOverDialogFragment extends DialogFragment {
 
         return builder.create();
     }
-
-
 }

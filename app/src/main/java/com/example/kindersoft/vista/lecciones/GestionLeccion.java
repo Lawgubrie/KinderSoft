@@ -206,4 +206,28 @@ public class GestionLeccion extends AppCompatActivity {
         startActivity(menuP);
     }
 
+    // Método para contar cuántas lecciones hay registradas
+    private void contarLecciones() {
+        // Accede a la referencia "lecciones" en la base de datos Firebase
+        databaseReference.child("lecciones").addListenerForSingleValueEvent(new ValueEventListener() {
+
+            // Se ejecuta una sola vez cuando se obtiene la información de Firebase
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                // Utilizamos dataSnapshot.getChildrenCount() para contar cuántos nodos hijos existen
+                long totalLecciones = dataSnapshot.getChildrenCount();
+
+                // Muestra el total de lecciones mediante un Toast en pantalla
+                Toast.makeText(GestionLeccion.this, "Total de lecciones: " + totalLecciones, Toast.LENGTH_SHORT).show();
+            }
+
+            // Se ejecuta si ocurre un error al leer los datos desde Firebase
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                // Mostrar mensaje de error si ocurre un problema
+                Toast.makeText(GestionLeccion.this, "Error al contar las lecciones", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
 }

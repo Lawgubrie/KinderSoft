@@ -185,6 +185,4 @@ public class Login extends AppCompatActivity {
         editor.apply();
     }
 
-
-
 }

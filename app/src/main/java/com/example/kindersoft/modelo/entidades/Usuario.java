@@ -87,13 +87,8 @@ public class Usuario {
 
     public String toStringCompleto(){
         return
-                "id='" + id + '\'' +
-                        ", username='" + username + '\'' +
-                        ", password='" + password + '\'' +
-                        ", nombres='" + nombres + '\'' +
-                        ", edad=" + edad +
-                        ", rol='" + rol + '\'' +
-                        ", puntosTotales=" + puntos_totales +
-                        '}';
+                        "Username= " + username +
+                        "\nRol='" + rol +
+                        "\nPuntos Totales= " + puntos_totales;
     }
 }

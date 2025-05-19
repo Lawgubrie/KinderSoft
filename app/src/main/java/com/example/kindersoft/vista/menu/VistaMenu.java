@@ -20,14 +20,17 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.kindersoft.vista.reportes.ViewReporte;
 import com.example.kindersoft.vista.juegos.GestionJuego;
 import com.example.kindersoft.R;
 import com.example.kindersoft.modelo.entidades.Usuario;
 import com.example.kindersoft.vista.autenticacion.GestionRegistro;
 import com.example.kindersoft.vista.autenticacion.Login;
 import com.example.kindersoft.vista.lecciones.GestionLeccion;
+import com.example.kindersoft.vista.lecciones.MenuLeccion;
 import com.example.kindersoft.vista.reportes.GestionReporte;
 import com.example.kindersoft.vista.trofeos.GestionTrofeos;
+import com.example.kindersoft.vista.trofeos.VistaTrofeos;
 
 import java.util.Map;
 
@@ -36,13 +39,19 @@ public class VistaMenu extends AppCompatActivity {
     private TextView txtSaludoUser;
     private LinearLayout menu;
     private String[] menuEstudiantes = { "lecciones", "trofeos", "reporte", "salir" };
-    private String[] menuAdmin = { "usuarios", "lecciones", "trofeos", "reporte","", "salir" };
+    private String[] menuAdmin = { "gestion_usuarios", "gestion_lecciones", "gestion_trofeos", "gestion_reporte","gestion_juego", "salir" };
+
+    //Enlace con los eventos
     private Map<String , Class<?>> actividades = Map.of(
-            "usuarios", GestionRegistro.class,
-            "lecciones", GestionLeccion.class,
-            "trofeos", GestionTrofeos.class,
-            "reporte", GestionReporte.class,
-            "", GestionJuego.class,
+            "gestion_usuarios", GestionRegistro.class,
+            "gestion_lecciones", GestionLeccion.class,
+            "gestion_trofeos", GestionTrofeos.class,
+            "gestion_reporte", GestionReporte.class,
+            "gestion_juego", GestionJuego.class,
+
+            "lecciones", MenuLeccion.class,
+            "trofeos", VistaTrofeos.class,
+            "reporte", ViewReporte.class,
             "salir", Login.class
     );
 

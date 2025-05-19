@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vista.trofeos.VistaTrofeos">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/btnVolverMenu"
+            android:layout_width="91dp"
+            android:layout_height="66dp"
+            android:onClick="regresarMenu"
+            android:src="?attr/homeAsUpIndicator" />
+
+        <LinearLayout
+            android:layout_width="334dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="11dp" />
+
+            <Button
+                android:id="@+id/btnLogosView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="!Completastes tu prime Quizz!"
+                android:textColor="#FFEB3B"
+                android:textColorLink="#A89292"
+                app:icon="@android:drawable/btn_star_big_on"
+                app:iconTint="#FFC107" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="11dp" />
+
+            <Button
+                android:id="@+id/btnLogosView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="!Jugastes un juego Retro!"
+                android:textColor="#FFEB3B"
+                android:textColorLink="#A89292"
+                app:icon="@android:drawable/btn_star_big_on"
+                app:iconTint="#FFC107" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="11dp" />
+
+            <Button
+                android:id="@+id/btnLogosView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="!Completastes tu prime Quizz!"
+                android:textColor="#FFEB3B"
+                android:textColorLink="#A89292"
+                app:icon="@android:drawable/btn_star_big_on"
+                app:iconTint="#FFC107" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="11dp" />
+
+            <Button
+                android:id="@+id/btnLogosView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="!Jugastes un juego Retro!"
+                android:textColor="#FFEB3B"
+                android:textColorLink="#A89292"
+                app:icon="@android:drawable/btn_star_big_on"
+                app:iconTint="#FFC107" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="11dp" />
+
+            <Button
+                android:id="@+id/btnLogosView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="!Completastes tu prime Quizz!"
+                android:textColor="#FFEB3B"
+                android:textColorLink="#A89292"
+                app:icon="@android:drawable/btn_star_big_on"
+                app:iconTint="#FFC107" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="11dp" />
+
+            <Button
+                android:id="@+id/btnLogosView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="!Jugastes un juego Retro!"
+                android:textColor="#FFEB3B"
+                android:textColorLink="#A89292"
+                app:icon="@android:drawable/btn_star_big_on"
+                app:iconTint="#FFC107" />
+
+            <Button
+                android:id="@+id/btnLogosView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="!Completastes tu prime Quizz!"
+                android:textColor="#FFEB3B"
+                android:textColorLink="#A89292"
+                app:icon="@android:drawable/btn_star_big_on"
+                app:iconTint="#FFC107" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="11dp" />
+
+            <Button
+                android:id="@+id/btnLogosView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="!Jugastes un juego Retro!"
+                android:textColor="#FFEB3B"
+                android:textColorLink="#A89292"
+                app:icon="@android:drawable/btn_star_big_on"
+                app:iconTint="#FFC107" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="11dp" />
+
+            <Button
+                android:id="@+id/btnLogosView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="!Completastes tu prime Quizz!"
+                android:textColor="#FFEB3B"
+                android:textColorLink="#A89292"
+                app:icon="@android:drawable/btn_star_big_on"
+                app:iconTint="#FFC107" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="11dp" />
+
+            <Button
+                android:id="@+id/btnLogosView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="!Jugastes un juego Retro!"
+                android:textColor="#FFEB3B"
+                android:textColorLink="#A89292"
+                app:icon="@android:drawable/btn_star_big_on"
+                app:iconTint="#FFC107" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="11dp" />
+
+            <Button
+                android:id="@+id/btnLogosView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="!Completastes tu prime Quizz!"
+                android:textColor="#FFEB3B"
+                android:textColorLink="#A89292"
+                app:icon="@android:drawable/btn_star_big_on"
+                app:iconTint="#FFC107" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

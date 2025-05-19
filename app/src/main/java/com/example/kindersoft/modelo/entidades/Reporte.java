@@ -40,10 +40,8 @@ public class Reporte {
 
     @Override
     public String toString() {
-        return "Reporte{" +
-                "id='" + id + '\'' +
-                ", idUsuario='" + idUsuario + '\'' +
-                ", puntuacion=" + puntuacion +
-                '}';
+        return
+                "IdUsuario= " + idUsuario +
+                        " \npuntuacion= " + puntuacion;
     }
 }

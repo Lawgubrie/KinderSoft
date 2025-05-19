@@ -39,10 +39,8 @@ public class Trofeo {
 
     @Override
     public String toString() {
-        return "Trofeo{" +
-                "id='" + id + '\'' +
-                ", descripcion='" + descripcion + '\'' +
-                ", nombre='" + nombre + '\'' +
-                '}';
+        return
+                "Descripcion= " + descripcion +
+                "\nNombre= " + nombre;
     }
 }

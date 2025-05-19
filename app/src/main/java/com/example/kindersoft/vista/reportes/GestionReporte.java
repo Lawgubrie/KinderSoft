@@ -93,7 +93,6 @@ public class GestionReporte extends AppCompatActivity {
             }
         });
     }
-
     private void listarUsuarios() {
         listaUsuarios = new ArrayList<>();
 
@@ -105,7 +104,6 @@ public class GestionReporte extends AppCompatActivity {
                     Usuario usuario = usuarioSnap.getValue(Usuario.class);
                     listaUsuarios.add(usuario);
                 }
-
                 arrayAdapterUsuarios = new ArrayAdapter<>(GestionReporte.this, android.R.layout.simple_spinner_item, listaUsuarios);
                 arrayAdapterUsuarios.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnerIdUsuario.setAdapter(arrayAdapterUsuarios);

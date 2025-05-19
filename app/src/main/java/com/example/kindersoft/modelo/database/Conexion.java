@@ -11,7 +11,6 @@ public class Conexion {
     private static FirebaseDatabase database;
     private static DatabaseReference databaseReference;
 
-    // Llamar esto solo una vez (por ejemplo, en la primera actividad que se lanza)
     public static void inicializarFirebase(Context context) {
         if (database == null) {
             FirebaseApp.initializeApp(context);
